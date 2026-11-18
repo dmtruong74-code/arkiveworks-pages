@@ -1,0 +1,83 @@
+/* ArkiveWorks shared styles (from arkiveworks.com), with this app's jewel colors. */
+/* The app's own interface font, served from this site (nothing loads from Google): Plus Jakarta Sans,
+   SIL Open Font License 1.1 (fonts/OFL.txt), the files from the npm package @expo-google-fonts/plus-jakarta-sans. */
+@font-face{font-family:"Plus Jakarta Sans";font-weight:400;font-style:normal;font-display:swap;src:url("fonts/PlusJakartaSans_400Regular.ttf") format("truetype")}
+@font-face{font-family:"Plus Jakarta Sans";font-weight:500;font-style:normal;font-display:swap;src:url("fonts/PlusJakartaSans_500Medium.ttf") format("truetype")}
+@font-face{font-family:"Plus Jakarta Sans";font-weight:600;font-style:normal;font-display:swap;src:url("fonts/PlusJakartaSans_600SemiBold.ttf") format("truetype")}
+@font-face{font-family:"Plus Jakarta Sans";font-weight:700;font-style:normal;font-display:swap;src:url("fonts/PlusJakartaSans_700Bold.ttf") format("truetype")}
+@font-face{font-family:"Plus Jakarta Sans";font-weight:800;font-style:normal;font-display:swap;src:url("fonts/PlusJakartaSans_800ExtraBold.ttf") format("truetype")}
+:root{
+  --bg:#08080f; --bg-soft:#0f0f1c;
+  --surface:rgba(255,255,255,.04); --surface-2:rgba(255,255,255,.07);
+  --border:rgba(255,255,255,.10);
+  --text:#f4f4fb; --muted:#a2a3b8;
+  --sapphire:#24419E; --ruby:#8E2433; --emerald:#0F5C47; --violet:#4E2A85; --amber:#D99A2B;
+  --link:#8fb0ff;
+  --radius:18px; --maxw:1140px;
+  --font:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:
+  radial-gradient(55% 45% at 15% 0%,rgba(36,65,158,.32),transparent 60%),
+  radial-gradient(50% 45% at 95% 5%,rgba(142,36,51,.22),transparent 55%),
+  radial-gradient(50% 50% at 50% 100%,rgba(217,154,43,.12),transparent 60%),var(--bg)}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(8,8,15,.6);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:-.02em;font-size:1.05rem}
+.logo{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,var(--sapphire),var(--violet));box-shadow:0 6px 18px rgba(36,65,158,.5)}
+.logo svg{width:18px;height:18px}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{color:var(--muted);font-size:.94rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:11px 20px;border-radius:999px;font-weight:600;font-size:.94rem;border:1px solid transparent;transition:transform .18s ease,box-shadow .18s ease}
+.btn-primary{background:linear-gradient(135deg,var(--sapphire),var(--ruby));color:#fff;box-shadow:0 10px 30px rgba(36,65,158,.4)}
+.btn-primary:hover{transform:translateY(-2px)}
+.nav-links .btn-primary{color:#fff}
+.hero{padding:100px 0 70px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:.82rem;font-weight:500;margin-bottom:26px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
+h1.hero-title{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;letter-spacing:-.035em;font-weight:800;margin-bottom:22px}
+.jewel-text{background:linear-gradient(120deg,#6f8cff 0%,#e0566b 45%,var(--amber) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--muted);max-width:640px;margin:0 auto 14px}
+.lead-en{font-size:1rem;color:#8f90a6;max-width:640px;margin:0 auto 34px;font-style:italic}
+section{padding:60px 0}
+.section-head{text-align:center;max-width:640px;margin:0 auto 46px}
+.section-head h2{font-size:clamp(1.8rem,3.5vw,2.5rem);letter-spacing:-.03em;font-weight:800;margin-bottom:12px}
+.section-head p{color:var(--muted)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(3,1fr)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px}
+.card .bar{height:4px;width:44px;border-radius:4px;margin-bottom:18px}
+.card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+.card p.en{color:#8f90a6;font-size:.9rem;margin-top:8px;font-style:italic}
+.b-sapphire{background:var(--sapphire)}.b-ruby{background:var(--ruby)}.b-emerald{background:var(--emerald)}.b-violet{background:var(--violet)}.b-amber{background:var(--amber)}
+.note{max-width:760px;margin:0 auto;text-align:center;color:var(--muted)}
+.page-hero{padding:70px 0 24px}
+.page-hero h1{font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.03em;font-weight:800;margin-bottom:12px}
+.page-hero p{color:var(--muted);font-size:1.08rem;max-width:680px}
+.lang-switch{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.lang-switch a{padding:7px 14px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:.88rem;font-weight:600}
+.lang-switch a:hover{color:var(--text)}
+.prose{max-width:780px;margin:0 auto;padding:10px 0 40px}
+.prose h2{font-size:1.6rem;font-weight:800;margin:46px 0 10px;letter-spacing:-.02em;scroll-margin-top:90px}
+.prose h3{font-size:1.12rem;font-weight:700;margin:28px 0 8px;scroll-margin-top:90px}
+.prose p{color:#cfd0e0;margin-bottom:14px}
+.prose ol,.prose ul{color:#cfd0e0;margin:0 0 16px 22px}
+.prose li{margin-bottom:8px}
+.prose a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
+.prose strong{color:var(--text)}
+.info-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 26px;margin:22px 0}
+.info-card .btn{margin-top:6px}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item h3{margin:0 0 8px}
+.muted{color:var(--muted);font-size:.92rem}
+hr.split{border:none;border-top:1px solid var(--border);margin:56px 0 0}
+footer{border-top:1px solid var(--border);padding:34px 0 40px;margin-top:40px}
+.footer-bottom{color:var(--muted);font-size:.88rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer-bottom a:hover{color:var(--text)}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.nav-links a:not(.btn){display:none}.grid{grid-template-columns:1fr}.hero{padding:70px 0 50px}}
