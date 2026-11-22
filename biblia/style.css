@@ -44,6 +44,15 @@ h1.hero-title{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;letter-spacing
 .jewel-text{background:linear-gradient(120deg,#6f8cff 0%,#e0566b 45%,var(--amber) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--muted);max-width:640px;margin:0 auto 14px}
 .lead-en{font-size:1rem;color:#8f90a6;max-width:640px;margin:0 auto 34px;font-style:italic}
+/* The two store buttons under the title: a label while the app is on its way, a white button once it is live. */
+.stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.store{display:inline-flex;align-items:center;gap:12px;min-height:58px;min-width:220px;padding:10px 22px;border-radius:16px;border:1px solid var(--border);background:var(--surface-2);color:var(--text);text-align:left;font-weight:700;font-size:1.05rem;line-height:1.25;transition:transform .18s ease,box-shadow .18s ease}
+.store small{display:block;font-weight:500;font-size:.74rem;color:var(--muted)}
+.store svg{width:24px;height:24px;flex:none}
+.store.soon{color:#cfd0e0}
+a.store{background:#fff;border-color:#fff;color:#16181d;box-shadow:0 10px 30px rgba(36,65,158,.35)}
+a.store small{color:#5a5f6b}
+a.store:hover{transform:translateY(-2px)}
 section{padding:60px 0}
 .section-head{text-align:center;max-width:640px;margin:0 auto 46px}
 .section-head h2{font-size:clamp(1.8rem,3.5vw,2.5rem);letter-spacing:-.03em;font-weight:800;margin-bottom:12px}
